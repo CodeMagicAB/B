@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Harmattan:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&family=Freeman&family=Marhey:wght@300..700&family=Readex+Pro:wght@160..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="icon"><i class="fa-solid fa-bars" onclick="toggleNav()"></i></div>
+            <ul id="bar">
+                <li><a href="#">الرئيسية</a></li>
+                <li><a href="#">قران كريم</a></li>
+                <li><a href="#">ادعية</a></li>
+                <li><a href="#">التواصل مع المطور</a></li>
+                <li class="inp"><input type="text" placeholder="ابحث....."></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="pho">
+        <img src="lMEOft2Bn546hjKXOQqFxevbJnfMxMQJr42PLj8r.jfif" alt="">
+    </div>
+    <span class="up show" onclick="scrollToTop()"><i class="fa-solid fa-arrow-up"></i>
+    </span>
+    <section>
+        <div class="conteiner">
+                <h1>وَإِذَا قُرِئَ الْقُرْآنُ فَاسْتَمِعُوا لَهُ وَأَنْصِتُوا لَعَلَّكُمْ تُرْحَمُونَ</h1>
+                <div class="serch">
+                    <input type="search" placeholder="ابحث عن اسم القارئ........." dir="rtl" class="search-input" onkeyup="search()">
+                </div>
+                <div class="main" dir="rtl">
+                        <div class="flex">
+                            <div class="el_shei5">
+                            <img src="صور الشيوخ/images.jfif" alt="">
+                            <div class="kala">
+                            <h3>اسلام صبحي</h3>
+                            <p>الشيخ اسلام صبحي</p>
+                            <button><a href="#">استمع<i class="fa-solid fa-headphones"></i></a></button>
+                            </div>
+                        </div>
+                        <div class="el_shei5">
+                            <img src="صور الشيوخ/2_600_600.jpg" alt="">
+                            <div class="kala">
+                            <h3> سعد الغامدي</h3>
+                            <p>الشيخ سعد الغامدي</p>
+                            <button><a href="#">استمع<i class="fa-solid fa-headphones"></i></a></button>
+                            </div>
+                        </div>
+                        <div class="el_shei5">
+                            <img src="صور الشيوخ/mishary-rashid-alafasy-7.jpg" alt="">
+                            <div class="kala">
+                            <h3>مشاري رشادي</h3>
+                            <p>القراء اسلام صبحي</p>
+                            <button><a href="#">استمع<i class="fa-solid fa-headphones"></i></a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex">
+                            <div class="el_shei5">
+                            <img src="صور الشيوخ/images.jfif" alt="">
+                            <div class="kala">
+                            <h3>اسلام صبحي</h3>
+                            <p>القراء اسلام صبحي</p>
+                            <button><a href="#">استمع<i class="fa-solid fa-headphones"></i></a></button>
+                            </div>
+                        </div>
+                        <div class="el_shei5">
+                            <img src="صور الشيوخ/mohamed-seddik-el-menchaoui-154.jpg" alt="">
+                            <div class="kala">
+                            <h3>اسلام صبحي</h3>
+                            <p>القراء اسلام صبحي</p>
+                            <button><a href="#">استمع<i class="fa-solid fa-headphones"></i></a></button>
+                            </div>
+                        </div>
+                        <div class="el_shei5">
+                            <img src="صور الشيوخ/mohamed-seddik-el-menchaoui-154.jpg" alt="">
+                            <div class="kala">
+                            <h3>اسلام صبحي</h3>
+                            <p>القراء اسلام صبحي</p>
+                            <button><a href="#">استمع<i class="fa-solid fa-headphones"></i></a></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleNav() {
+            var navBar = document.getElementById("bar");
+            if (navBar.style.display === "block") {
+                navBar.style.display = "none";
+            } else {
+                navBar.style.display = "block";
+            }
+        }
+
+        function search(){  
+    let searchBar = document.querySelector('.search-input').value.toUpperCase();  
+    let productList = document.querySelector('p');  
+    let product = document.querySelectorAll('.el_shei5');  
+    let productName = document.getElementsByTagName('h3');  
+    for (let i=0; i<productName.length; i++) {  
+    if (productName[i].innerHTML.toUpperCase().indexOf(searchBar) >= 0) {  
+        product[i].style.display = "";  
+    } else {  
+        product[i].style.display = "none";  
+    }  
+}  
+}
+
+
+
+function scrollToTop(){
+window.scrollTo(0, 0);
+}
+        let span = document.querySelector(".up");
+window.scroll =function(){
+    if(this.scrollY>= 1000){
+        div.classList.add(".show");
+    }else{
+        div.classList.remove(".show");
+        
+    }
+}
+    </script>
+</body>
+</html>
